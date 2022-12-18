@@ -1,3 +1,6 @@
+# Overview
+This repository is for storing all my web development learning procecss, I used two main resources for this, one is an online courses and the other from Microsoft web development course.
+
 # HTML
 ![img_1.png](images/Notes/html.png)
 
