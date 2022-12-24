@@ -12,7 +12,7 @@ app.post("/bmicalculator", (req, res) => {
     let height = parseFloat(req.body.height)
     let result = weight * height;
     res.send("You BMI is " + result)
-}) 
+});
 
 app.listen(3000, () => {
     console.log("Server started")
