@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-
-    <% if (kindOfDay === "Saturday" || kindOfDay === "Saturday") { %>
+    <!-- Try not to use those scriplet tags, keep the logic in server -->
+    <!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Saturday") { %>
         <h1 style="color: purple;"><%= kindOfDay %> ToDo List</h1>
     <% } else { %>
-        <h1 style="color: purple;"><%= kindOfDay %> ToDo List</h1>
-    <% } %>
+        <h1><%= kindOfDay %> ToDo List</h1>
+    <% } %> -->
+
+    <h1><%= kindOfDay %></h1>
+
+    <ul>
+        <% for (var i = 0; i < newListItems.length; i++) { %>
+            <li> <%= newListItems[i] %> </li>
+        <% } %>
+        
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="todoInput" id="todoInput">
+        <button type="submit">Go</button>
+    </form>
 </body>
 </html>
