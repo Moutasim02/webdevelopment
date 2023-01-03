@@ -1,42 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <!-- Try not to use those scriplet tags, keep the logic in server -->
-    <!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Saturday") { %>
+<%- include("header") -%>
+<!-- Try not to use those scriplet tags, keep the logic in server -->
+<!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Saturday") { %>
         <h1 style="color: purple;"><%= kindOfDay %> ToDo List</h1>
     <% } else { %>
         <h1><%= kindOfDay %> ToDo List</h1>
     <% } %> -->
 
-    <div class="box" id="heading">
-      <h1><%= kindOfDay %></h1>
-    </div>
+<div class="box" id="heading">
+  <h1><%= kindOfDay %></h1>
+</div>
 
-    <div class="box">
-      <% for (var i = 0; i < newListItems.length; i++) { %>
-      <div class="item">
-        <input type="checkbox" />
-        <p><%= newListItems[i] %></p>
-      </div>
-      <% } %>
+<div class="box">
+  <% for (var i = 0; i < newListItems.length; i++) { %>
+  <div class="item">
+    <input type="checkbox" />
+    <p><%= newListItems[i] %></p>
+  </div>
+  <% } %>
 
-      <form class="item" action="/" method="post">
-        <input
-          type="text"
-          name="todoInput"
-          id="todoInput"
-          placeholder="New Task"
-          autocomplete="off"
-        />
-        <button type="submit">+</button>
-      </form>
-    </div>
-  </body>
-</html>
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="todoInput"
+      id="todoInput"
+      placeholder="New Task"
+      autocomplete="off"
+    />
+    <button type="submit">+</button>
+  </form>
+</div>
+<%- include("footer") -%>
